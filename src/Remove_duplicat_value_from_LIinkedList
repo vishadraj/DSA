@@ -1,0 +1,14 @@
+
+public void removeDuplicates(){
+    if(head == null){
+        return;
+    }
+    ListNode current = head;
+    while(current != null && current.next.data){
+        if(current.data == current.next.data){
+              current.next = current.next.next;
+              } else{
+                    current = current.next;
+              }
+        }
+}

@@ -1,0 +1,103 @@
+CSLL is similar to SLL, with a diffenernce that in CLL the Last NODE Points to the first node and NOT NUll.
+
+IN CSLL we keep track off the last node and not the head
+
+                        | last
+SLL head -> 10 -> 15 -> 14 -> null
+
+                    | last
+CSLL    |--> 1 -> 8 -> 10
+        |_______________|
+
+public class CircularLinkedList{
+    private ListNode last;
+    private int length;
+
+    private class ListNode{
+        private ListNode next;
+        private int data;
+
+        public ListNode(int data)
+        {
+            this.data = data;
+        }
+    }
+    public CircularLinkedList(){
+    last =null;
+    length =0;
+    }
+}
+
+-------------------------------------------------------------------------------
+main method
+
+
+public static void main(String[] args){
+        CircularLinkedList cll = new CircularLInkedList();
+        cll.createCircularLinkedList();
+        cll.insertFirst(10);
+        cll.insertFirst(11);
+        cll.display();
+    }
+
+
+----------------------------------------------------------------------------------
+public void createCircularLinkedList(){
+    ListNode first = new ListNode(1);
+    ListNode second = new ListNode(5);
+    ListNode third = new ListNode(10);
+    ListNode fourth = new ListNode(15);
+
+    first.next = second;
+    second.next = third;
+    third.next = fourth;
+
+
+}
+
+--------------------------------------------------------------------------------------
+// traverse
+
+public void display(){
+    if(last == null){
+        return;
+    }
+    ListNode first = last.next;
+    while(first!= last){
+        System.out.print(first.data + "-->");
+        first = first.next;
+    }
+    System.out.println(first.data);
+}
+
+
+-----------------------------------------------------------------------------------------
+insert First
+
+public void insertFirst(int data) {
+    ListNode temp = new ListNode(data);
+    if(last == null){
+        last = temp;
+    } else {
+        temp.next = last.next;
+    }
+    last.next = temp;
+    length++;
+}
+
+
+-------------------------------------------------------------------------------------------
+insert Last
+
+public void insertLast(int data){
+    ListNode temp = new ListNode(data);
+    if(last == null){
+        last= temp;
+        last.next = last;
+    } else {
+        temp.next = last.next;
+        last.next = temp;
+        last = temp;
+    }
+    length++;
+}

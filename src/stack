@@ -1,0 +1,73 @@
+What is Stack
+ It is a liner Data Structure used for storing the data.
+ It is an an ordered List in Which insertion and deletion are done at one end, called Top
+ the last element inserted is the firt one to be deleted called as "LIFO"
+
+       top
+        |
+       10-> 8-> 1-> 11 -> 15 -> null
+  in a stack there are only two method for operation the stack.
+
+      Push :-
+                        |  |
+                        |  |
+       push operation   |20|
+                        |15|
+                        |10|
+                        Stack
+
+                        |20|   after performing pop operation      |null|
+                        |15|                                        stack
+                        |10|                                    now the stack is empty
+
+
+       Implementation of stack for Push
+
+       Implementation of Stck
+
+                public class Stack {
+                    private ListNode top;
+                    private int length;
+
+                        private class ListNode{
+                            private int data; // can be a generic type
+                            private ListNode next; // Reference to next ListNode in list
+
+                            public ListNode(int data) {
+                                this.data = data;
+                                this.next = null;
+                            }
+                        }
+
+                }
+
+
+        three Basic method for stack
+         -----------------------------------------------------------------------------------------------------------
+         public Stack(){
+                top = null;
+                length = 0;
+            }
+         -------------------------------------------------------------------------------------------------------------
+            public int length(){
+                return length;
+            }
+         -------------------------------------------------------------------------------------------------------------
+            public boolean isEmpty(){
+                return  length ==0;
+            }
+         ------------------------------------------------------------------------------------------------------------
+           public void push(int data){
+                 ListNode temp = new ListNode(data);
+                 temp.next = top;
+                 top = temp;
+                 length++;
+             }
+          ------------------------------------------------------------------------------------------------------------
+             public int peek(){
+                 if(isEmpty()){
+                     throw new EmptyStackException();
+                 }
+                 return top.data;
+             }
+

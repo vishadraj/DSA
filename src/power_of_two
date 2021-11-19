@@ -1,0 +1,83 @@
+# 231 Power of Two
+Question :- Given an integer , write a function
+
+
+
+Methodology to solve this problem
+1. Brute force
+2. Bitwise operations (  jab bhi koi no 2 ka power hota hai then pure no me sirf ek bit hii 1 hoga   )
+
+Intuition : Brute Force method
+
+If a number is a power of 2, it reduces to 1, if we recursively divide it by 2 while the Remainder is 0
+
+Algo :- Divide the input by 2, till the remainder is =0;
+Check if the number is reduced to 1
+ if yes return True
+ else return false
+
+
+ LeetCode problem number 231
+:- Brute force
+ class Solution {
+    public boolean isPowerOfTwo(int n){
+        if(n==0) return false;
+        while(n%2==0) n/=2;
+        return n ==1;
+    }
+ }
+
+Bitwise operations :-
+if a number is a power of 2, its binary form will contain a 1 followed by zeros.
+It will contain only only 1 bit and rest would be zeros.
+
+Binary form for 2 : 10                                     Contains exactly one 1 bit
+Binary form for 4 : 100
+Binary form for 8 : 1000
+
+Binary form for 3 : 11
+Binary form for 5 : 101                                    contains more than One 1-bit
+Binary form for 10 : 1010
+
+
+
+1 . form number starting with rightmost 1 for 8
+ x&(-x) : logic for right most bit and add
+
+                | Right most 1 bit
+                1000 -> 1000
+                1000 = 1000
+
+                | rightmost 1 bit
+                110 -> 10
+                110 != 10
+
+   jo number hai uska 1's complement then 2's complement than check the given no is equal to original no or not;
+
+   class Solution {
+         public boolean isPowerOfTwo (int n){
+            if (n==0) return false;
+            long x = (long) n;
+            return (x & (-x)) == x;
+         }
+   }
+
+
+               OR
+
+    class Solution {
+            public boolean isPowerOfTwo (int n){
+               if (n==0) return false;
+               long x = (long) n;
+               return (x & (x-1)) == 0;
+            }
+      }
+
+   Intuition :
+
+   If a number is a power of 2, the number formed by , setting the rightmost 1 bit will be equal to zero
+   While if the number contains more one's the Number formed starting whit the rightmost 1 to 0. will not be equal to 0.
+
+
+
+

@@ -1,0 +1,26 @@
+// program to find the middle element of an linked list using two pointer method
+
+public class Main{
+    public LIstNode getMiddleNode(){
+        if(head==null){return null;}
+        ListNode slowPtr = head;
+        ListNode fastPtr = head;
+        while(fastPtr != null && slowPtr.next != null){
+            slowPtr  = slowPtr.next;
+            fastPtr = fastPtr.next.next;
+        }
+        return slowPtr;
+    }
+
+    public static void main(String[] args){
+        Main sll = new Main();
+        sll.insertFirst(11);
+        sll.insertFirst(8;
+        sll.insertFirst(1);
+        sll.insertFirst(10);
+        sll.display();
+        ListNode middleNode - sll.getMiddleNode();
+        System.out.println("Middle Node is - " + middleNode.data);
+    }
+
+}
