@@ -1,0 +1,100 @@
+Trees :-
+
+
+                                        Trees
+                                          |
+                                         ADT
+                                          |
+                                       1. Org. Charts
+                                       2. File Systems
+                                       3. Programming Environments
+                                       4. Decision Tree
+
+                 Trees Grouping
+                    1. Binary Tree 2 children
+                    2. Binary Search Tree
+                    3. Sorted Binary Tree
+                    4. AVL tree
+                    5. Heap
+
+
+                 Multiway Tree(any number of children)
+                    1. Multiway Search Tree
+                    2. m-way tree
+                    3. B-tree
+                    4. 2-4 tree
+
+
+                  Types of Binary Tree
+                  1. Rooted Binary Trees
+                  2. Full/Strictly Binary Tree
+                  3. Perfect Binary Tree
+                  4. complete Binary Tree
+                  5. Skewed Binary Tree
+
+
+
+
+                 Rooted Binary Tree :-
+                    A rooted Binary Tree is a binary tree that satisfies the following 2 properties
+                        It has a root node.
+                        Each node has at most 2 children.
+
+
+                 Full/Strict Binary Tree :-
+                    A binary tree in which every ode has either = or 2 children is called as a Full binary tree.
+                    Full binary tree is also called as Strictly binary tree. First binary tree is not a full binary tree because node C has only 1 child
+
+                 Perfect Binary Tree :-
+                    A perfect binary tree is a binary tree that satisfies the following 2 properties
+                    Every internal node has exactly 2 children.
+                    All the leaf nodes are at the same level.
+
+                 Complete Binary Tree :-
+                    An complete binary tree is a binary tree that satisfies the following 2 properties
+                    All the leaves are completely filled except possibly the last leave.
+                    The last level must be strictly filled from left to right.
+
+                 Skewed Binary Tree :-
+                    A skewed binary tree is a binary tree that satisfies the following 2 properties
+                    All the nodes except one node has one and only one child. THe remaining node has no child.
+                                                    OR
+                   A skewed binary tree is a binary tree of n nodes such that its depth is (n-1)
+
+
+        What are Binary Tree Traversals
+               Tree Traversal refers to the process of visiting each node in a tree data structure exactly once.
+
+               Tree Traversal Techniques
+                       1. Depth First Traversal
+                            1. Preorder Traversal
+                            2. Inorder Traversal
+                            3. Postorder Traversal
+                       2. Breadth First Traversal
+
+
+               1. Pre-order Traversal
+                     Algo :-
+                        1. Visit the root
+                        2. Traverse the left sub tree. call Preorder (left sub tree)
+                        3. Traverse the rigth sub tree. call Preorder (right sub tree)
+
+                     Root -> Left -> Right
+               2. In-order Traversal
+                     ALgo :-
+                        1. Traverse the left sub tree. call In-order (left sub tree)
+                        2. visit the root
+                        3. Traverse the right sub tree. call In-order (right sub tree)
+
+                     Left -> Root -> Right
+               3. Post-Order Traversal
+                     Algo :-
+                        1. Traverse the left sub tree. call Postorder (left sub tree)
+                        2. Travers the right sub tree. call Postorder (right sub tree)
+                        3. visit the root
+
+                     Left -> Right -> Root
+
+               Breadth - First Traversal
+                1. Breadth First Traversal of a tree prints all the nodes of a tree level by level.
+                2. Breadth First Traversal is also called as Level Order Traversal.

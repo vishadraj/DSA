@@ -1,0 +1,51 @@
+32. Longest Valid Parentheses
+
+
+Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.
+
+
+
+Example 1:
+
+Input: s = "(()"
+Output: 2
+Explanation: The longest valid parentheses substring is "()".
+Example 2:
+
+Input: s = ")()())"
+Output: 4
+Explanation: The longest valid parentheses substring is "()()".
+Example 3:
+
+Input: s = ""
+Output: 0
+
+
+Constraints:
+
+0 <= s.length <= 3 * 104
+s[i] is '(', or ')'
+
+
+
+solution :
+
+Logical Conclusion No. 1 :-    if the last element of the string is open parentheses then the characters is always invalid .
+                               if the last element of the string is close parentheses then the characters is possibly invalid.
+Logical Conclusion No. 2 :-    if there is blank string then it is always invalid. and if only one parentheses which is open or close then it is always invalid.
+
+
+testCase 2: -       ( ( ) ( ) )  <- array
+                    0 1 2 3 4 5
+
+                 0 0
+                 0 1 2 3 4 5 6   <- dp
+
+
+
+                 j = i - dp[i] -1
+                 if(arr[j] = '(' && arr[i]=')'){
+                    dp[i+1] = dp[i] + dp[j]+2
+                 }
+
+                 dp[i+1] =4;
