@@ -10,6 +10,9 @@ public class SearchIn2DMatrix {
     }
 
     public static boolean findTheTargetInMatrix(int[][] givenMatrix, int target) {
+        int left = 0;
+        int right = givenMatrix[0].length - 1;
+
         return false;
     }
 }
