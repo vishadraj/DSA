@@ -8,4 +8,8 @@ public class SearchIn2DMatrix {
     public static void main(String[] args) {
 
     }
+
+    public static boolean findTheTargetInMatrix(int[][] givenMatrix, int target) {
+        return false;
+    }
 }
