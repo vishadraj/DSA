@@ -1,0 +1,18 @@
+Backtracking is a solving a problem by trail and error.
+Backtracking is a well organized trial and error method.
+Backtracking is a systematic way of trying out various sequences of decisions
+until the one that "works" is found.
+Backtracking does a depth-first search of a tree.
+Backtracking searches possible (partial) solution.s
+Each choice is a nod in the tree.
+Backtracking is a systematic way to go through all the possible configurations of a search space.
+For some problems, the only way to solve is to check all possibilities
+Backtracking is a modifies depth-first search of a tree.
+backtracking involves only a tree search.
+backtracking is the procedure whereby:
+    After determining that a node can lead to nothing but dead nodes.
+    we go back ("backtrack") to the node's parent and proceed with the search on the next child.
+
+
+
+   N -Queens Problem
